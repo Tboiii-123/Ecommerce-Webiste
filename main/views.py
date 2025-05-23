@@ -13,11 +13,6 @@ import threading
 import stripe
 from django.conf import settings
 import os
-from dotenv import load_dotenv
-
-
-
-load_dotenv()
 
 stripe.api_key =os.getenv('STRIPE_SECRET_KEY')
 # Create your views here.
