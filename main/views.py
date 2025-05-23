@@ -405,7 +405,7 @@ def checkout(request):
         cart.items.all().delete()
         return render(request, 'checkout.html', {
             'client_secret': intent.client_secret,
-            'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY,
+            'stripe_publishable_key': os.getenv('STRIPE_PUBLISHABLE_KEY'),
             'amount': amount / 100,  # convert back to dollars for display
         })
     
@@ -429,7 +429,7 @@ def checkout(request):
         messages.error(request, "Payment not completed. Please try again.")
         return redirect('checkout')
 
-    return redirect('view_cart')
+
 
 
 passwordName ='ancn ggqu qxlh rbnt'

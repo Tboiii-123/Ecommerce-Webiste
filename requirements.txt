@@ -1,0 +1,9 @@
+asgiref==3.6.0
+Django==4.2.15
+gunicorn==23.0.0
+psycopg2==2.9.9
+Pillow==10.0.1
+sqlparse==0.4.3
+tzdata==2022.7
+whitenoise==6.7.0
+yagmail==0.15.293
