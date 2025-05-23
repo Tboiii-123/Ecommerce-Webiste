@@ -1,0 +1,5 @@
+.navbar-nav .nav-link,
+.navbar-brand {
+    font-size: 1.25rem; /* You can increase this (e.g., 1.5rem or 20px) */
+    font-weight: 500; /* Optional: makes it bolder */
+}

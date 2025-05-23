@@ -1,0 +1,323 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block title %}
+
+         Electro -  Ecommerce Website
+     {% endblock %}
+     
+
+
+
+ {% block css%}
+
+ <link rel="stylesheet" href={% static 'css/login.css' %}>
+		<!-- Slick -->
+		<link type="text/css" rel="stylesheet" href={% static 'css/slick.css' %}>
+		<link type="text/css" rel="stylesheet" href={% static "css/slick-theme.css" %}>
+
+		<!-- nouislider -->
+		<link type="text/css" rel="stylesheet" href={% static "css/nouislider.min.css" %}>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href={% static "css/style.css" %}>
+        		<!-- Bootstrap -->
+	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+{% endblock%}
+
+
+
+
+        {% block navbar %}
+		<div id="navbar-container">
+			{% include 'nav.html' %}
+		  </div>
+		  
+        {% endblock %}
+    
+        
+        {% block content %}
+        
+        
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<!-- section title -->
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title"> Products</h3>
+							<div class="section-nav">
+								<ul class="section-tab-nav tab-nav">
+									<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
+									<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
+									<li><a data-toggle="tab" href="#tab1">Cameras</a></li>
+									<li><a data-toggle="tab" href="#tab1">Accessories</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /section title -->
+
+					<!-- Products tab & slick -->
+					
+					<div class="col-md-12">
+					
+						<div class="row">
+							<div class="products-tabs">
+								<!-- tab -->
+								<div id="tab1" class="tab-pane active">
+									<div class="products-slick" data-nav="#slick-nav-1">
+										
+										<!-- product -->
+                                        
+                                        {% if products %}
+                                            {% for product in products %}
+                                                <div class="product">
+                                                    <a href={% url 'product' product.id %}>
+                                                        <div class="product-img">
+                                                            <img src="{{ product.Image.url }}" alt="">
+                                                            <div class="product-label">
+                                                                <span class="sale">-30%</span>
+                                                                <span class="new">NEW</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="product-body">
+                                                        <p class="product-category">{{ product.category }}</p>
+                                                        <h3 class="product-name">{{ product.name }}</h3>
+                                                        <h4 class="product-price">{{ product.price }} <del class="product-old-price">$990.00</del></h4>
+                                                        <div class="product-rating">
+                                                            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                        <div class="product-btns">
+                                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+                                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+                                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <form class="add-to-cart-form" data-product-id="{{ product.id }}">
+                                                            {% csrf_token %}
+                                                            <input type="hidden" name="quantity" value="1" min="1">
+                                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <h3 style="color: red;">Product not available </h3>
+                                        {% endif %}
+
+					
+										
+									
+  
+										<!-- /product -->
+
+
+									</div>
+									<div id="slick-nav-1" class="products-slick-nav"></div>
+								</div>
+								<!-- /tab -->
+							</div>
+						</div>
+					</div>
+					
+					<!-- Products tab & slick -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- HOT DEAL SECTION -->
+		<div id="hot-deal" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="hot-deal">
+							<ul class="hot-deal-countdown">
+								<li>
+									<div>
+										<h3>02</h3>
+										<span>Days</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>10</h3>
+										<span>Hours</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>34</h3>
+										<span>Mins</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h3>60</h3>
+										<span>Secs</span>
+									</div>
+								</li>
+							</ul>
+							<h2 class="text-uppercase">hot deal this week</h2>
+							<p>New Collection Up to 50% OFF</p>
+							<a class="primary-btn cta-btn" href="#">Shop now</a>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /HOT DEAL SECTION -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+			
+
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+        
+
+
+        <!-- NEWSLETTER -->
+		<div id="newsletter" class="section py-4">
+			<div class="container">
+			  <div class="row justify-content-center">
+				<div class="col-md-8 col-lg-6 text-center">
+				  <p class="mb-3 fs-5">
+					Sign Up for the <strong>NEWSLETTER</strong>
+				  </p>
+				  <form method="POST" action="{% url 'newsletter' %}" class="d-flex justify-content-center gap-2 flex-wrap">
+					{% csrf_token %}
+					<input
+					  type="email"
+					  name="mail"
+					  class="form-control flex-grow-1"
+					  placeholder="Enter Your Email"
+					  required
+					/>
+					<button type="submit" class="btn btn-danger">
+					  <i class="fa fa-envelope"></i> Subscribe
+					</button>
+					
+				  </form>
+				  <ul class="list-inline mt-3">
+					<li class="list-inline-item">
+					  <a href="#"><i class="fa fa-facebook fs-4"></i></a>
+					</li>
+					<li class="list-inline-item">
+					  <a href="#"><i class="fa fa-twitter fs-4"></i></a>
+					</li>
+					<li class="list-inline-item">
+					  <a href="#"><i class="fa fa-instagram fs-4"></i></a>
+					</li>
+					<li class="list-inline-item">
+					  <a href="#"><i class="fa fa-pinterest fs-4"></i></a>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
+		<!-- /NEWSLETTER -->
+<script>
+
+	function setupAddToCartForms() {
+		document.body.addEventListener('submit', function(e) {
+			const form = e.target.closest('.add-to-cart-form');
+			if (!form) return;
+	
+			e.preventDefault();
+	
+			const productId = form.getAttribute('data-product-id');
+			const quantity = form.querySelector('input[name="quantity"]').value;
+			const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
+	
+			fetch(`/add-to-cart/${productId}/`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': csrfToken
+				},
+				body: JSON.stringify({ quantity: quantity })
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data.success) {
+					alert('Cart added successfully!');
+	
+					fetch('/navbar/')
+						.then(res => res.text())
+						.then(html => {
+							document.getElementById('navbar-container').innerHTML = html;
+						});
+				} else {
+					alert(data.error || 'Failed to add item');
+				}
+			})
+			.catch(error => {
+				console.error('Error adding to cart:', error);
+			});
+		});
+	}
+	
+	// Run on initial page load
+	document.addEventListener('DOMContentLoaded', () => {
+		setupAddToCartForms();
+	});
+	
+		</script>
+		
+	
+		
+{% include 'footer.html' %}
+        {% endblock %}
+
+{% block js%}
+		<!-- jQuery Plugins -->
+		<script src={% static "js/index.js" %}></script>
+		
+		<script src={% static "js/jquery.min.js" %}></script>
+		<script src={% static "js/bootstrap.min.js" %}></script>
+		<script src={% static "js/slick.min.js" %}></script>
+		<script src={% static "js/nouislider.min.js" %}></script>
+		<script src={% static "js/jquery.zoom.min.js" %}></script>
+		<script src={% static "js/main.js" %}></script>
+		
+		
+
+
+        {% endblock %}
+
+

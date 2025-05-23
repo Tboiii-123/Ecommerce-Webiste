@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Profile - Electro
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/profile.css' %}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{% endblock %}
+
+{% block navbar %}
+    {% include 'nav.html' %}
+{% endblock %}
+
+{% block content %}
+<!-- PROFILE SECTION -->
+<div class="section py-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- Profile Card -->
+        <div class="col-lg-6 col-md-8">
+          <div class="card shadow-sm rounded-3">
+            <div class="card-header text-center bg-primary text-white py-2">
+              <h5 class="mb-0">Edit Your Profile</h5>
+            </div>
+            <div class="card-body py-3">
+  
+              <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+  
+                <!-- Profile Image -->
+                <div class="text-center mb-2">
+                  <img src="{{ profile.profile_img.url }}" alt="Profile" id="profile" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;">
+                  <input type="file" name="image" id="profile_image" class="d-none">
+                  <label for="profile_image" class="btn btn-info btn-sm mt-1">New Image</label>
+                </div>
+  
+                <!-- Form Fields -->
+                <div class="mb-2">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" id="username" name="username" class="form-control form-control-sm" value="{{ user.username }}">
+                </div>
+  
+                <div class="mb-2">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control form-control-sm" name="name" value="{{ profile.fname }} - {{ profile.lname }}">
+                </div>
+  
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" class="form-control form-control-sm" value="{{ user.email }}">
+                </div>
+  
+                <div class="mb-2">
+                  <label for="number" class="form-label">Phone Number</label>
+                  <input type="text" class="form-control form-control-sm" name="number" value="{{ profile.number }}">
+                </div>
+  
+                <div class="mb-2">
+                  <label for="dob" class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control form-control-sm" name="dob" value="{{ profile.Dob|date:'Y-m-d' }}">
+                </div>
+  
+                <div class="mb-2">
+                  <label for="address" class="form-label">Address</label>
+                  <input type="text" class="form-control form-control-sm" name="address" value="{{ profile.address }}">
+                </div>
+  
+                <p class="small text-muted mb-2"><strong>Joined:</strong> {{ user.date_joined|date:"F j, Y" }}</p>
+  
+                <div class="text-center mt-3">
+                  <button type="submit" class="btn btn-primary btn-sm me-1">Save</button>
+                  <a href="{% url 'logout' %}" class="btn btn-danger btn-sm">Logout</a>
+                </div>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+        <!-- /Profile Card -->
+      </div>
+    </div>
+  </div>
+  
+  {% endblock %}

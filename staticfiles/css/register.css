@@ -1,0 +1,87 @@
+
+#images {
+    height: 600px;
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    #images {
+        display: none !important
+    }
+}
+
+
+
+
+
+.outer{
+    margin-top: 0px;
+    
+}
+
+
+@media(max-width:990px){
+    .outer{
+        margin-top: 0px;
+    }
+    
+}
+
+@media(max-width:786px){
+    #images{
+ 
+        
+        visibility: hidden;
+        
+    }
+    
+}
+
+
+.expense{
+    font-size: 25px;
+}
+.forgot{
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 31px;
+    font-weight: bolder;
+}
+.dont{
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+
+.sign{
+    
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+#input{
+    margin-top: 20px;
+}
+
+#submit{
+    margin-top: 20px;
+     border:solid 2px red;
+     background-color: #15161D;
+     color:white;
+        
+    
+    }
+    
+    
+.account{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.text{
+    padding-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
