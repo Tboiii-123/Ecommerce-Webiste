@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,18 +82,26 @@ WSGI_APPLICATION = 'Ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'ecommerce_hg5a',
+#         'USER': 'ecommerce_hg5a_user',
+#         'PASSWORD': '7RIK0YAV3ElS9ahpMJPOAX36u5f6jcoY',
+#         'HOST': 'dpg-d0nstjruibrs73c4s5qg-a.oregon-postgres.render.com',
+#         'PORT': '5432',  # default PostgreSQL port
+#     }
+# }
+
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ecommerce_hg5a',
-        'USER': 'ecommerce_hg5a_user',
-        'PASSWORD': '7RIK0YAV3ElS9ahpMJPOAX36u5f6jcoY',
-        'HOST': 'dpg-d0nstjruibrs73c4s5qg-a.oregon-postgres.render.com',
-        'PORT': '5432',  # default PostgreSQL port
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('postgresql://postgres:[YOUR-PASSWORD]@db.vkcrzhssfvmmopvjvjkq.supabase.co:5432/postgres'), 
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
