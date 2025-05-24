@@ -106,11 +106,11 @@ WSGI_APPLICATION = 'Ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('dbname'),
-        'USER': os.getenv('user'),
-        'PASSWORD': os.getenv('password'),
-        'HOST': os.getenv('host'),
-        'PORT': '5432',
+        'NAME': 'postgres',
+        'USER': 'postgres.vkcrzhssfvmmopvjvjkq',
+        'PASSWORD':'Yinkusss123@',
+        'HOST':'aws-0-eu-west-2.pooler.supabase.com' ,
+        'PORT': '6543',
     }
 }
 
