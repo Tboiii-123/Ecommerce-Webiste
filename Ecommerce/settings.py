@@ -154,9 +154,9 @@ STATICFILES_DIRS =['static/']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Use a separate folder for this
 
 
-#For uploading
-MEDIA_URL ='/media/'
-MEDIA_ROOT =os.path.join(BASE_DIR,'media')
+# #For uploading
+# MEDIA_URL ='/media/'
+# MEDIA_ROOT =os.path.join(BASE_DIR,'media')
 
 
 
@@ -170,3 +170,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 INSTALLED_APPS.append('main')
 
+
+#Cloudinary Production media upload setup
+
+import cloudinary
+import cloudinary.api
+import cloudinary.uploader
+
+CLOUDINARY_STORAGE ={
+    'CLOUD_NAME':'dugjy3sff',
+    'API_KEY':'526951793988548',
+    'API_SECRET':'kPQBNk79eBxgxnHuclAiFAxrLpM',
+}
+DEFAULT_FILE_STORAGE ='cloudinary_storage.storage.MediaCloudinaryStorage'
