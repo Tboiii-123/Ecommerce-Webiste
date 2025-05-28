@@ -51,11 +51,11 @@ def register(request):
 
     if request.method =="POST":
 
-            firstname =request.POST.get('fname')
-            lastname =request.POST.get('lname')            
-            username =request.POST.get('username')
-            number  =request.POST.get('number')
-            email =request.POST.get('email')
+            firstname =request.POST.get('fname') or None
+            lastname =request.POST.get('lname')   or None         
+            username =request.POST.get('username') or None
+            number  =request.POST.get('number') or None
+            email =request.POST.get('email') or None
             password1 =request.POST.get('password')
             password2=request.POST.get('password2')
         
@@ -156,10 +156,10 @@ def profile(request):
             image =request.FILES.get('image')
             
         
-        dob =request.POST.get('dob')
-        number =request.POST.get('number')
-        address =request.POST.get('address')
-        email =request.POST.get('email')        
+        dob =request.POST.get('dob') or None
+        number =request.POST.get('number') or None
+        address =request.POST.get('address') or None
+        email =request.POST.get('email')     or None   
         profile.profile_img =image        
         profile.Dob =dob
         profile.number= number
