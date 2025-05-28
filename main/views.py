@@ -160,7 +160,7 @@ def profile(request):
         dob_input = request.POST.get('dob')
         if dob_input:
             try:
-                dob = datetime.strptime(dob_input, "%Y-%m-%d").date()
+                dob = request.POST.get('dob')
             except ValueError:
                 dob = None  # or handle invalid date input separately
         else:
