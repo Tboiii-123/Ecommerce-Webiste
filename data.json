@@ -1,0 +1,2599 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "main",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "main",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "main",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "main",
+    "model": "cartitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "main",
+    "model": "cart"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4v5thiw2hjnw3378jchp8ouxabf0p7es",
+  "fields": {
+    "session_data": ".eJxVjM0OwiAQhN-FsyH8dBE8evcZyMKCVA0kpT0Z312a9KBzmsw3M2_mcVuL33pa_EzswiQ7_WYB4zPVHdAD673x2Oq6zIHvFX7Qzm-N0ut6dP8OCvYy1kkEQ9lKiyZHK8RZOw0T6kljHBJOGkOAhAaSAOVAOnJRQR5eqwzs8wXg9Td1:1tp4YQ:512ZeNQrhH93Wg4G_YBRzeZkw9l0h8UyPdq_skxixqw",
+    "expire_date": "2025-03-17T12:05:50.006Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bhprp7su8efxye1o70ek377i7eb1d8bb",
+  "fields": {
+    "session_data": ".eJxVjM0OwiAQhN-FsyH8dBE8evcZyMKCVA0kpT0Z312a9KBzmsw3M2_mcVuL33pa_EzswiQ7_WYB4zPVHdAD673x2Oq6zIHvFX7Qzm-N0ut6dP8OCvYy1kkEQ9lKiyZHK8RZOw0T6kljHBJOGkOAhAaSAOVAOnJRQR5eqwzs8wXg9Td1:1uFBSS:i9ia1YjExNAAAiB25tibZ4-YS6kPIgQ4-zmPZaBXg54",
+    "expire_date": "2025-05-28T12:43:36.638Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gyfxy8l16bkiwd2812miovu0jdb7kkc5",
+  "fields": {
+    "session_data": ".eJxVjM0OwiAQhN-FsyH8dBE8evcZyMKCVA0kpT0Z312a9KBzmsw3M2_mcVuL33pa_EzswiQ7_WYB4zPVHdAD673x2Oq6zIHvFX7Qzm-N0ut6dP8OCvYy1kkEQ9lKiyZHK8RZOw0T6kljHBJOGkOAhAaSAOVAOnJRQR5eqwzs8wXg9Td1:1uE42k:90CdLqE14ZUOp9AnaB7WMJae2LF6FvK0WkhsfzuHzLc",
+    "expire_date": "2025-05-25T10:36:26.390Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "unk3rvvfcg953i3uhgcmekhn7oyq6421",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2ZCFSpd69N43ENgFqRpISnsy_l1JetDrzGRewvl9y25vcXULi4sYxOmXBU-PWLrguy-3KqmWbV2C7Ik8bJNz5fi8Hu3fIPuW-9YaSGq0ECnqwQLDGQ3pMTF51KhwUuarFAcLhhN4SxASEiLBlGgQ7w_ULTgB:1uK9fS:_AGBDvzzTHlgUwNPmX25rD9cZnBkdMqIRLmcUfzMEfs",
+    "expire_date": "2025-06-11T05:49:34.298Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yj0kmo86zpbtzt10uc8igqsx5ocmgtgg",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCEwoBL956BMMwgVUOT0q6Md7dNutDtf-_9t4hpXWpcO89xJHERWpx-N0z5yW0H9EjtPsk8tWUeUe6KPGiXt4n4dT3cv4Oaet1qpwAYEYsrNnsYclZnD5kGCImZkbWyQOwNWMOkwbiEJmxuIQzeGfH5AgQVOLE:1tp7Tm:81B9inzEGDMraIH1HLzuNr9kUf_FNHgjAs0t5dd70L8",
+    "expire_date": "2025-03-17T15:13:14.240Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z5cebsuq9ec3dzf25o08d8s5lnf4q1p1",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCEwoBL956BMMwgVUOT0q6Md7dNutDtf-_9t4hpXWpcO89xJHERWpx-N0z5yW0H9EjtPsk8tWUeUe6KPGiXt4n4dT3cv4Oaet1qpwAYEYsrNnsYclZnD5kGCImZkbWyQOwNWMOkwbiEJmxuIQzeGfH5AgQVOLE:1uE408:neX3geWsTLuj-MwQaIVU95an-JcJdC7JD0UN22cVQ8Q",
+    "expire_date": "2025-05-25T10:33:44.379Z"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 1,
+  "fields": {
+    "name": "Phones"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 2,
+  "fields": {
+    "name": "Laptops"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 3,
+  "fields": {
+    "name": "Shoes"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 4,
+  "fields": {
+    "name": "Cloth"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 5,
+  "fields": {
+    "name": "Gadgets"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 6,
+  "fields": {
+    "name": "Books"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 7,
+  "fields": {
+    "name": "Drinks"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 8,
+  "fields": {
+    "name": "Home Applianaces"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 1,
+  "fields": {
+    "name": "Samsung S21 Ultra",
+    "price": "200000.00",
+    "category": 1,
+    "description": "Samsung S 21 Ultra,with Snap dragon 2",
+    "Image": "uploads/product/product07.png"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 2,
+  "fields": {
+    "name": "Techno Pop 4",
+    "price": "70000.00",
+    "category": 1,
+    "description": "Tech Pop $, with the Helio g22 Processor",
+    "Image": "uploads/product/product07_G1HCusJ.png"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 3,
+  "fields": {
+    "name": "Pepsi",
+    "price": "12000.00",
+    "category": 7,
+    "description": "Cold Pepsi in pack. 12 drinks in it",
+    "Image": "uploads/product/pepsi.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 4,
+  "fields": {
+    "name": "Hp Revolver 808",
+    "price": "150000.00",
+    "category": 2,
+    "description": "Hp Laptop ,8gg ram and 125gb ssd of storage device,Core i5",
+    "Image": "uploads/product/product06.png"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 5,
+  "fields": {
+    "name": "Forex International Book",
+    "price": "7000.00",
+    "category": 6,
+    "description": "This books teahes one how to control emotions and physcology",
+    "Image": "uploads/product/Snapchat-2012939904.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 6,
+  "fields": {
+    "name": "Addidas",
+    "price": "40000.00",
+    "category": 3,
+    "description": "A sneaker for excersise",
+    "Image": "uploads/product/sneaker.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 7,
+  "fields": {
+    "name": "Boot",
+    "price": "70000.00",
+    "category": 3,
+    "description": "A shoe wear for playing football",
+    "Image": "uploads/product/1693218484948.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 8,
+  "fields": {
+    "name": "Mireinder",
+    "price": "12000.00",
+    "category": 7,
+    "description": "A cold drink with 12 in it",
+    "Image": "uploads/product/1684606913507.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 9,
+  "fields": {
+    "name": "Dell Laptop",
+    "price": "300000.00",
+    "category": 2,
+    "description": "A gaming laptop with 12gb of ram , 1terabyte of rom storage device. Core i7",
+    "Image": "uploads/product/shop01.png"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 10,
+  "fields": {
+    "name": "Jordan",
+    "price": "90000.00",
+    "category": 3,
+    "description": "A Basketball shoe",
+    "Image": "uploads/product/jordan.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 11,
+  "fields": {
+    "name": "Nike",
+    "price": "70000.00",
+    "category": 3,
+    "description": "A Nike product",
+    "Image": "uploads/product/nike.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 12,
+  "fields": {
+    "name": "Nike Air",
+    "price": "12000.00",
+    "category": 3,
+    "description": "A Nike Air Product",
+    "Image": "uploads/product/nike_air.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 13,
+  "fields": {
+    "name": "Fanta",
+    "price": "12000.00",
+    "category": 7,
+    "description": "a Fanta Drink",
+    "Image": "uploads/product/fanta.jpg"
+  }
+},
+{
+  "model": "main.product",
+  "pk": 14,
+  "fields": {
+    "name": "Shirt",
+    "price": "70000.00",
+    "category": 4,
+    "description": "A cool shirt",
+    "Image": "uploads/product/shirt2.webp"
+  }
+},
+{
+  "model": "main.cartitem",
+  "pk": 101,
+  "fields": {
+    "cart": 3,
+    "product": 13,
+    "quantity": 1
+  }
+},
+{
+  "model": "main.cartitem",
+  "pk": 102,
+  "fields": {
+    "cart": 3,
+    "product": 8,
+    "quantity": 1
+  }
+},
+{
+  "model": "main.cartitem",
+  "pk": 103,
+  "fields": {
+    "cart": 3,
+    "product": 3,
+    "quantity": 1
+  }
+},
+{
+  "model": "main.cartitem",
+  "pk": 137,
+  "fields": {
+    "cart": 1,
+    "product": 4,
+    "quantity": 1
+  }
+},
+{
+  "model": "main.cartitem",
+  "pk": 138,
+  "fields": {
+    "cart": 1,
+    "product": 3,
+    "quantity": 1
+  }
+},
+{
+  "model": "main.cartitem",
+  "pk": 139,
+  "fields": {
+    "cart": 1,
+    "product": 2,
+    "quantity": 1
+  }
+},
+{
+  "model": "main.cartitem",
+  "pk": 140,
+  "fields": {
+    "cart": 1,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add profile",
+    "content_type": [
+      "main",
+      "profile"
+    ],
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change profile",
+    "content_type": [
+      "main",
+      "profile"
+    ],
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": [
+      "main",
+      "profile"
+    ],
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view profile",
+    "content_type": [
+      "main",
+      "profile"
+    ],
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add product",
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change product",
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete product",
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view product",
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add category",
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change category",
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete category",
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view category",
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add cart item",
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "codename": "add_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change cart item",
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "codename": "change_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete cart item",
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "codename": "delete_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view cart item",
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "codename": "view_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add cart",
+    "content_type": [
+      "main",
+      "cart"
+    ],
+    "codename": "add_cart"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change cart",
+    "content_type": [
+      "main",
+      "cart"
+    ],
+    "codename": "change_cart"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete cart",
+    "content_type": [
+      "main",
+      "cart"
+    ],
+    "codename": "delete_cart"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view cart",
+    "content_type": [
+      "main",
+      "cart"
+    ],
+    "codename": "view_cart"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Arxr1152Y100xI5OmI7ekk$/7FBG26rT4lmKUA9r+h4Z1nL8Pgzl8IgmBhVDWX5aLc=",
+    "last_login": "2025-05-14T12:43:36.572Z",
+    "is_superuser": true,
+    "username": "lawal",
+    "first_name": "",
+    "last_name": "",
+    "email": "lawalhussein775@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-02-23T10:14:41.880Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$UpLJTfGagwtwyK4cu4uuuG$zPdR8VafCalMDyhNgF6vN1bjs5bQ6cRBqQJxZjpYkKw=",
+    "last_login": "2025-05-25T10:06:40.528Z",
+    "is_superuser": false,
+    "username": "Tboiii",
+    "first_name": "hussein",
+    "last_name": "lawal",
+    "email": "lawalhussein775@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-02T12:57:08.961Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$S5poPQiQFyEWDA2E2s9sbc$KE25Ee7tD12SLMIWEnaXNZMJxIYiPEJjB/wKifr/xhY=",
+    "last_login": "2025-05-28T05:49:34.269Z",
+    "is_superuser": false,
+    "username": "kenny",
+    "first_name": "Husseinat",
+    "last_name": "Lawal",
+    "email": "lawalhusseinat123@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-05-14T19:35:41.065Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "main.profile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "Tboiii"
+    ],
+    "fname": "hussein",
+    "lname": "lawal",
+    "email": "lawalhussein775@gmail.com",
+    "number": "09035014430",
+    "address": "5 Oyebola street Near Ikrodu Estate",
+    "Dob": "2025-05-06",
+    "profile_img": "profile/Snapchat-2039894901_BE6Yajn.jpg"
+  }
+},
+{
+  "model": "main.profile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "kenny"
+    ],
+    "fname": "Husseinat",
+    "lname": "Lawal",
+    "email": "lawalhusseinat123@gmail.com",
+    "number": "09035382972",
+    "address": "Ikorodu",
+    "Dob": "2025-05-22",
+    "profile_img": "profile/Snapchat-1154390.jpg"
+  }
+},
+{
+  "model": "main.cart",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "Tboiii"
+    ],
+    "created_at": "2025-05-14T19:00:34.058Z"
+  }
+},
+{
+  "model": "main.cart",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "lawal"
+    ],
+    "created_at": "2025-05-15T10:44:28.133Z"
+  }
+},
+{
+  "model": "main.cart",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "kenny"
+    ],
+    "created_at": "2025-05-19T10:58:07.656Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-05-13T07:42:38.215Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "profile"
+    ],
+    "object_id": "1",
+    "object_repr": "Tboiii",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Dob\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-05-13T07:47:33.419Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "profile"
+    ],
+    "object_id": "1",
+    "object_repr": "Tboiii",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-05-13T07:47:40.448Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "profile"
+    ],
+    "object_id": "1",
+    "object_repr": "Tboiii",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-05-13T08:49:27.407Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Phone",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-05-13T08:49:33.271Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Laptops",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-05-13T08:49:40.292Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Shoes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-05-13T08:49:47.461Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Clothes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-05-13T08:50:09.618Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "Gadgets",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-05-13T08:50:17.721Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "6",
+    "object_repr": "Books",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-05-13T08:50:34.900Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "7",
+    "object_repr": "Drinks",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-05-13T08:50:58.191Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "8",
+    "object_repr": "Home Applianaces",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-05-13T17:55:12.302Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Samsung S21 Ultra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-05-13T17:56:03.721Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Techno Pop 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-05-13T17:56:56.131Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Pepsi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-05-13T17:58:14.264Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "Hp Revolver 808",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-05-13T17:59:28.411Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Forex International Book",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-05-13T18:00:01.318Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Addidas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-05-13T18:00:32.469Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Boot",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-05-13T18:01:11.535Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Mireinder",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-05-13T18:02:15.546Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "Dell Laptop",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-05-14T19:00:34.080Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cart"
+    ],
+    "object_id": "1",
+    "object_repr": "Cart (Tboiii)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-05-14T19:00:49.163Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "1",
+    "object_repr": "Pepsi x 9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-05-14T19:01:03.268Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "2",
+    "object_repr": "Mireinder x 89",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-05-15T07:01:23.818Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "4",
+    "object_repr": "Techno Pop 4 x 3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-05-15T07:15:11.910Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "5",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-05-15T07:15:11.963Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "3",
+    "object_repr": "Samsung S21 Ultra x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-05-15T07:15:12.030Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "2",
+    "object_repr": "Mireinder x 89",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-05-15T07:15:12.070Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "1",
+    "object_repr": "Pepsi x 10",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-05-15T07:26:07.223Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "8",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-05-15T07:26:07.270Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "7",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-05-15T07:26:07.333Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "6",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-05-15T08:03:47.275Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "9",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-05-15T09:07:48.054Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "13",
+    "object_repr": "Techno Pop 4 x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-05-15T09:07:48.099Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "12",
+    "object_repr": "Samsung S21 Ultra x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-05-15T09:07:48.164Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "11",
+    "object_repr": "Pepsi x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-05-15T09:07:48.221Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "10",
+    "object_repr": "Hp Revolver 808 x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-05-15T09:34:51.321Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "14",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-05-15T10:08:38.754Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "18",
+    "object_repr": "Samsung S21 Ultra x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-05-15T10:08:38.830Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "17",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-05-15T10:08:38.889Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "16",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-05-15T10:08:38.949Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "15",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-05-15T10:11:25.499Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "22",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-05-15T10:11:25.562Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "21",
+    "object_repr": "Samsung S21 Ultra x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-05-15T10:11:25.624Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "20",
+    "object_repr": "Hp Revolver 808 x 3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-05-15T10:11:25.690Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "19",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-05-15T10:45:58.257Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "24",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-05-15T10:45:58.322Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "23",
+    "object_repr": "Hp Revolver 808 x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-05-15T10:58:32.761Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "26",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-05-15T10:58:32.812Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "25",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-05-15T11:07:27.868Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "29",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-05-15T11:07:27.941Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "28",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-05-15T11:07:28.000Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "27",
+    "object_repr": "Hp Revolver 808 x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-05-15T11:17:27.068Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "33",
+    "object_repr": "Samsung S21 Ultra x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-05-15T11:17:27.125Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "32",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-05-15T11:17:27.183Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "31",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-05-15T11:17:27.257Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "30",
+    "object_repr": "Hp Revolver 808 x 3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-05-15T11:21:49.627Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "36",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-05-15T11:21:49.678Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "35",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-05-15T11:21:49.771Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "34",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-05-15T11:23:41.309Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "39",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-05-15T11:23:41.370Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "38",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-05-15T11:23:41.432Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "37",
+    "object_repr": "Hp Revolver 808 x 14",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-05-15T11:23:47.912Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "40",
+    "object_repr": "Samsung S21 Ultra x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-05-15T11:27:42.318Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "42",
+    "object_repr": "Pepsi x 4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-05-15T11:27:42.363Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "41",
+    "object_repr": "Hp Revolver 808 x 4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-05-15T11:31:22.394Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "43",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-05-15T11:33:23.937Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "47",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-05-15T11:33:23.988Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "46",
+    "object_repr": "Samsung S21 Ultra x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-05-15T11:33:24.064Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "45",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-05-15T11:33:24.123Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "44",
+    "object_repr": "Hp Revolver 808 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-05-15T11:34:41.497Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "55",
+    "object_repr": "Samsung S21 Ultra x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-05-15T11:34:41.560Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "54",
+    "object_repr": "Samsung S21 Ultra x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-05-15T11:34:41.635Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "53",
+    "object_repr": "Samsung S21 Ultra x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-05-15T11:34:49.136Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "51",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-05-15T17:23:23.473Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "52",
+    "object_repr": "Samsung S21 Ultra x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-05-15T17:23:23.533Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "50",
+    "object_repr": "Techno Pop 4 x 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-05-15T17:23:23.601Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "49",
+    "object_repr": "Pepsi x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-05-15T17:23:23.681Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "48",
+    "object_repr": "Hp Revolver 808 x 6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-05-15T17:24:19.029Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "cartitem"
+    ],
+    "object_id": "57",
+    "object_repr": "Techno Pop 4 x 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-05-19T10:53:45.191Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Pepsi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-05-19T10:53:59.257Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Addidas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-05-19T10:54:37.220Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Jordan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-05-19T10:54:59.654Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Nike",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-05-19T10:55:30.402Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "Nike Air",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-05-19T10:55:58.027Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Fanta",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-05-19T19:42:58.796Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Cargo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-05-19T19:43:19.318Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Phones",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-05-20T07:19:53.186Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Cloth",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-05-20T07:25:06.065Z",
+    "user": [
+      "lawal"
+    ],
+    "content_type": [
+      "main",
+      "product"
+    ],
+    "object_id": "14",
+    "object_repr": "Shirt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
