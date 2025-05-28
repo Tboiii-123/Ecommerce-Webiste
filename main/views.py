@@ -13,6 +13,7 @@ import threading
 import stripe
 from django.conf import settings
 import os
+import datetime
 
 stripe.api_key =os.getenv('STRIPE_SECRET_KEY')
 # Create your views here.
@@ -155,8 +156,15 @@ def profile(request):
             
             image =request.FILES.get('image')
             
-        
-        dob =request.POST.get('dob') or None
+         # Date of Birth handling
+        dob_input = request.POST.get('dob')
+        if dob_input:
+            try:
+                dob = datetime.strptime(dob_input, "%Y-%m-%d").date()
+            except ValueError:
+                dob = None  # or handle invalid date input separately
+        else:
+            dob = None
         number =request.POST.get('number') or None
         address =request.POST.get('address') or None
         email =request.POST.get('email')     or None   
