@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static%}
  
+{% block title%}
+  Register
+{% endblock%}
 
 {% block css%}
 
@@ -40,7 +43,7 @@
 
             <label for="Exp. Date" class="form-label">User Name</label>
 
-       <input type="text" class="form-control my-2" placeholder="Username" name="username" required >
+       <input type="text" class="form-control my-2" placeholder="Username" name="username" value={{username}} required >
 
      
 
@@ -49,7 +52,7 @@
           <div class="col-sm-6">
               <label for="Exp. Date" class="form-label">First Name</label>
 
-              <input type="text" class="form-control"  placeholder="John" name="fname"  required>
+              <input type="text" class="form-control"  placeholder="John" name="fname" value={{fname}}  required>
               <div class="invalid-feedback">
               Valid first name is required.
               </div>
@@ -59,7 +62,7 @@
 
               <label for="Cvc" class="form-label">Last Name</label>
 
-              <input type="text" class="form-control" id="lastName" placeholder="Doe" name="lname" required>
+              <input type="text" class="form-control" id="lastName" placeholder="Doe" name="lname" value={{lname}} required>
               <div class="invalid-feedback">
               Valid last name is required.
               </div>
@@ -70,7 +73,7 @@
           <div class="col-sm-6">
               <label for="Exp. Date" class="form-label">Email</label>
 
-              <input type="email" class="form-control"  placeholder="JohnDoe@gmail.com" name='email'  required>
+              <input type="email" class="form-control"  placeholder="JohnDoe@gmail.com" name='email' value={{email}}  required>
               <div class="invalid-feedback">
               Valid first name is required.
               </div>
@@ -79,7 +82,7 @@
           <div class="col-sm-6">
 
               <label for="Cvc" class="form-label">Phone Number</label>
-              <input type="number" class="form-control" id="lastName" placeholder="09035014430" name="number" required>
+              <input type="number" class="form-control" id="lastName" placeholder="09035014430" name="number" value={{number}} required>
               <div class="invalid-feedback">
               Valid last name is required.
               </div>
