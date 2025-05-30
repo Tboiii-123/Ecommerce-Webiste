@@ -385,26 +385,26 @@ def cart_action(request, item_id):
 
 
 #Cehckout Phase
+
 @login_required(login_url='/login/')
 def checkout(request):
-    # Get user's cart
     try:
         cart = Cart.objects.get(user=request.user)
     except Cart.DoesNotExist:
-        # If no cart, redirect to cart page or show error
-        return redirect('view_cart')
-    
-    if not cart.items.exists():
-        # No items in cart, redirect to cart or show a message
-        # You can also add a message here if you use Django messages framework
-        messages.error(request,'NO item in the Cart.Please Proceed to add items to cart')
         return redirect('view_cart')
 
-    # Calculate total amount in cents
-    amount = int(cart.get_total_price() * 100)  # assuming get_total_price returns float dollars
+    if not cart.items.exists():
+        messages.error(request, 'No item in the cart. Please add items.')
+        return redirect('view_cart')
+
+    amount = int(cart.get_total_price() * 100)
+
+    # Stripe maximum amount is 999,999.99 in cents
+    if amount > 99999999:
+        messages.error(request, "Total amount exceeds Stripe's limit of $999,999.99.")
+        return redirect('view_cart')
 
     if request.method == 'GET':
-        # Create a PaymentIntent
         intent = stripe.PaymentIntent.create(
             amount=amount,
             currency='usd',
@@ -414,28 +414,24 @@ def checkout(request):
         return render(request, 'checkout.html', {
             'client_secret': intent.client_secret,
             'stripe_publishable_key': os.getenv('STRIPE_PUBLISHABLE_KEY'),
-            'amount': amount / 100,  # convert back to dollars for display
+            'amount': amount / 100,
         })
-    
+
     if request.method == 'POST':
-         payment_intent_id = request.POST.get('payment_intent_id')
+        payment_intent_id = request.POST.get('payment_intent_id')
+        if not payment_intent_id:
+            messages.error(request, "Payment ID missing.")
+            return redirect('checkout')
 
-    if not payment_intent_id:
-        messages.error(request, "Payment ID missing.")
-        return redirect('checkout')
+        intent = stripe.PaymentIntent.retrieve(payment_intent_id)
 
-    # Retrieve PaymentIntent from Stripe
-    intent = stripe.PaymentIntent.retrieve(payment_intent_id)
-
-    if intent.status == 'succeeded':
-        # Payment successful
-        cart.items.all().delete()
-        messages.success(request,'Payment Sucessful')
-        return redirect('checkout')
-    else:
-        # Payment failed or incomplete
-        messages.error(request, "Payment not completed. Please try again.")
-        return redirect('checkout')
+        if intent.status == 'succeeded':
+            cart.items.all().delete()
+            messages.success(request, 'Payment successful!')
+            return redirect('checkout')
+        else:
+            messages.error(request, "Payment not completed. Please try again.")
+            return redirect('checkout')
 
 
 
