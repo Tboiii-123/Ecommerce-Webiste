@@ -61,83 +61,83 @@
 					<!-- Product thumb imgs -->
 
 					<!-- Product details -->
+
 					<div class="col-md-5">
-						<div class="card shadow-sm p-4">
-						  <h2 class="h4 fw-bold">{{ product.name }}</h2>
-					  
-						  <!-- Rating and Reviews -->
-						  <div class="d-flex align-items-center mb-3">
-							<div class="text-warning me-2">
-							  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							  <i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+						<div class="product-details">
+							<h2 class="product-name">{{product.name}}</h2>
+							<div>
+								<div class="product-rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<a class="review-link" href="#">10 Review(s) | Add your review</a>
 							</div>
-							<a class="text-muted small" href="#">10 Review(s) | Add your review</a>
-						  </div>
-					  
-						  <!-- Price and Availability -->
-						  <div class="mb-3">
-							<h3 class="h5 text-danger">${{ product.price }} <del class="text-muted fs-6">$990.00</del></h3>
-							<span class="badge bg-success">In Stock</span>
-						  </div>
-					  
-						  <!-- Description -->
-						  <p class="text-muted">{{ product.description }}</p>
-					  
-						  <!-- Add to Cart Form -->
-						  <form class="add-to-cart-form" data-product-id="{{ product.id }}" method="POST">
-							{% csrf_token %}
-							<div class="row g-3 mb-3">
-							  <div class="col-md-6">
-								<label for="size" class="form-label">Size</label>
-								<select class="form-select" name="size" id="size">
-								  <option value="X">X</option>
-								</select>
-							  </div>
-							  <div class="col-md-6">
-								<label for="color" class="form-label">Color</label>
-								<select class="form-select" name="color" id="color">
-								  <option value="Red">Red</option>
-								</select>
-							  </div>
+							<div>
+								<h3 class="product-price">${{product.price}} <del class="product-old-price">$990.00</del></h3>
+								<span class="product-available">In Stock</span>
 							</div>
-					  
-							<!-- Quantity and Button -->
-							<div class="d-flex align-items-center gap-3 mb-3">
-							  <div>
-								<label for="quantity" class="form-label">Qty</label>
-								<input type="number" class="form-control" name="quantity" value="{{ item_quantity }}" min="1" style="width: 100px;">
-							  </div>
-					  
-							  <button type="submit" class="btn btn-danger mt-4">
-								<i class="fa fa-shopping-cart me-2"></i>Add to Cart
-							  </button>
+							<p>{{product.description}}</p>
+							<form  class="add-to-cart-form"  data-product-id="{{ product.id }}">
+								{% csrf_token %}
+									
+								
+								<div class="product-options">
+									<label>
+										Size
+										<select class="input-select">
+											<option value="0">X</option>
+										</select>
+									</label>
+									<label>
+										Color
+										<select class="input-select">
+											<option value="0">Red</option>
+										</select>
+									</label>
+								</div>
+
+								<div class="add-to-cart">
+									<div class="qty-label">
+										Qty
+										<div class="input-number">
+											<input type="number" name="quantity" value="{{ item_quantity }}" min="1">
+											<span class="qty-up">+</span>
+											<span class="qty-down">-</span>
+										</div>
+									</div>
+									
+									
+									
+									
+									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+							
+							</form>
+							
 							</div>
-						  </form>
-					  
-						  <!-- Wishlist and Compare -->
-						  <div class="d-flex gap-3 mb-3">
-							<a href="#" class="btn btn-outline-secondary btn-sm"><i class="fa fa-heart-o me-1"></i>Wishlist</a>
-							<a href="#" class="btn btn-outline-secondary btn-sm"><i class="fa fa-exchange me-1"></i>Compare</a>
-						  </div>
-					  
-						  <!-- Categories -->
-						  <p class="mb-1"><strong>Category:</strong></p>
-						  <p>
-							<a href="#" class="me-2">Headphones</a>
-							<a href="#">Accessories</a>
-						  </p>
-					  
-						  <!-- Share Links -->
-						  <p class="mb-1"><strong>Share:</strong></p>
-						  <div class="d-flex gap-2">
-							<a href="#" class="text-primary"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="text-info"><i class="fa fa-twitter"></i></a>
-							<a href="#" class="text-danger"><i class="fa fa-google-plus"></i></a>
-							<a href="#" class="text-secondary"><i class="fa fa-envelope"></i></a>
-						  </div>
+
+							<ul class="product-btns">
+								<li><a href="#"><i class="fa fa-heart-o"></i> add to wishlist</a></li>
+								<li><a href="#"><i class="fa fa-exchange"></i> add to compare</a></li>
+							</ul>
+
+							<ul class="product-links">
+								<li>Category:</li>
+								<li><a href="#">Headphones</a></li>
+								<li><a href="#">Accessories</a></li>
+							</ul>
+
+							<ul class="product-links">
+								<li>Share:</li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+							</ul>
+
 						</div>
-					  </div>
-					  
 					</div>
 					<!-- /Product details -->
 
@@ -397,10 +397,7 @@
 							<form class="add-to-cart-form d-grid gap-2" data-product-id="{{ related.id }}">
 							{% csrf_token %}
 							<input type="hidden" name="quantity" value="1" min="1">
-							<button type="submit" class="btn btn-danger btn-lg w-100 rounded-pill">
-								<i class="fa fa-shopping-cart me-1"></i> Add to Cart
-							</button>
-							
+							<button class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-shopping me-1"></i> Add to cart</button>
 							</form>
 						</div>
 						</div>
