@@ -1,1 +1,3 @@
 .evn
+#Ignore staic file from uploading
+main/static

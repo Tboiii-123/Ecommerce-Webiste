@@ -39,7 +39,11 @@
   
                 <!-- Profile Image -->
                 <div class="text-center mb-2">
-                  <img src="{{ profile.profile_img.url }}" alt="Profile" id="profile" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;">
+                  <img src="{{ profile.profile_img.url }}" alt="Profile" id="profile" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;" 
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low">
+                  
                   <input type="file" name="image" id="profile_image" class="d-none">
                   <label for="profile_image" class="btn btn-info btn-sm mt-1">New Image</label>
                 </div>
