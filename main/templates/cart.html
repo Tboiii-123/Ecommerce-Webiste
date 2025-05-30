@@ -6,122 +6,113 @@
 {% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href={% static 'css/login.css' %}>
-<link rel="stylesheet" href={% static 'css/slick.css' %}>
-<link rel="stylesheet" href={% static 'css/slick-theme.css' %}>
-<link rel="stylesheet" href={% static 'css/nouislider.min.css' %}>
-<link rel="stylesheet" href={% static 'css/font-awesome.min.css' %}>
-<link rel="stylesheet" href={% static 'css/style.css' %}>
 
-<!-- Font Awesome 6 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://tboiii-123.github.io/Ecommerce-static-files/css/style.css">
+		
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
 {% endblock %}
 
 {% block navbar %}
+<div id="navbar-container">
+	
   {% include 'nav.html' %}
+
+</div>
+	
 {% endblock %}
 
 {% block content %}
-<!-- SECTION -->
-<div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="order-summary">
-          <div class="section-title">
-            <h3 class="title">Your Cart</h3>
-          </div>
 
-          <div class="table-responsive">
-            <table class="shopping-cart-table table">
-              <thead>
-                <tr>
-                  <th>Product</th>
-                  <th></th>
-                  <th class="text-center">Price</th>
-                  <th class="text-center">Quantity</th>
-                  
-                  <th class="text-center">Delete</th>
-                  <th class="text-center">Total</th>
-                  <th class="text-end"></th>
-                </tr>
-              </thead>
+<!-- Cart Section -->
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="mb-4 text-center">
+        <h3 class="fw-bold">Your Cart</h3>
+      </div>
 
-              <tbody>
-                {% for item in cart_items %}
-                <tr>
-                  <td class="thumb">
-                    <a href="{% url 'product' item.product.id %}" >
-                      <img src="{{ item.product.Image.url }}" alt="" style="height: 80px; max-width: 100px;" class="img-fluid">
-                    </a>
-                  </td>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th class="text-center">Price</th>
+              <th class="text-center">Quantity</th>
+              <th class="text-center">Actions</th>
+              <th class="text-center">Total</th>
+            </tr>
+          </thead>
 
-                  <td class="details">
-                    <h4><a >{{ item.product.name }}</a></h4>
-                    <p class="text-muted">{{ item.product.description|truncatechars:50 }}</p>
-                  </td>
+          <tbody>
+            {% for item in cart_items %}
+            <tr>
+              <td>
+                <a href="{% url 'product' item.product.id %}">
+                  <img src="{{ item.product.Image.url }}" alt="" class="img-fluid" style="height: 80px; max-width: 100px;">
+                </a>
+              </td>
+              <td>
+                <h5 class="mb-1">{{ item.product.name }}</h5>
+                <p class="text-muted mb-0 small">{{ item.product.description|truncatechars:50 }}</p>
+              </td>
+              <td class="text-center">
+                <strong>${{ item.product.price }}</strong>
+              </td>
+              <td class="text-center">
+                <form method="POST" action="{% url 'cart_action' item.id %}" class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
+                  {% csrf_token %}
+                  <input type="number" name="quantity" value="{{ item.quantity }}" min="1" class="form-control form-control-sm" style="width: 70px;">
+              </td>
+              <td class="text-center">
+                  <div class="d-flex flex-column gap-2">
+                    <button type="submit" name="action" value="update" class="btn btn-sm btn-primary">
+                      Update
+                    </button>
+                    <button type="submit" name="action" value="delete" class="btn btn-sm btn-danger">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </form>
+              </td>
+              <td class="text-center">
+                <strong class="text-danger">${{ item.product_total }}</strong>
+              </td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td colspan="6" class="text-center">
+                <h5 class="text-muted my-4">Your cart is empty</h5>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
 
-                  <td class="price text-center">
-                    <strong>${{ item.product.price }}</strong>
-                  </td>
-                  <td class="qty text-center" colspan="2">
-                    <form method="POST" action="{% url 'cart_action' item.id %}" class="d-flex flex-column flex-sm-row align-items-center gap-2">
-                      {% csrf_token %}
-                      <input
-                        class="form-control form-control-sm w-100 mb-2 mb-sm-0"
-                        type="number"
-                        name="quantity"
-                        value="{{ item.quantity }}"
-                        min="1"
-                        style="max-width: 80px;">
-                      <button
-                        class="btn btn-sm btn-primary w-100 mb-2 mb-sm-0"
-                        name="action"
-                        value="update"
-                        type="submit">
-                        Update
-                      </button>
-                      <button
-                        class="btn btn-sm btn-danger w-100"
-                        name="action"
-                        value="delete"
-                        type="submit">
-                        <i class="fa fa-trash"></i>
-                      </button>
-                    </form>
-                  </td>
-                  
-                  <td class="total text-center">
-                    <strong class="primary-color">${{ item.product_total }}</strong>
-                  </td>
-                </tr>
-                {% empty %}
-                <tr>
-                  <td colspan="6" class="text-center">
-                    <h4>Your cart is empty</h4>
-                  </td>
-                </tr>
-                {% endfor %}
-              </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4"></td>
+              <th class="text-end">Subtotal</th>
+              <th class="text-center text-danger">${{ cart_total }}</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
 
-              <tfoot>
-                <tr>
-                  <th colspan="4" class="text-end">Subtotal</th>
-                  <th colspan="2" class="text-center">${{ cart_total }}</th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-
-          <div class="text-end text-sm-end text-center mt-3">
-            <a href="{% url 'checkout' %}" class="btn btn-danger">Proceed to Checkout</a>
-          </div>
-          
-
-        </div>
+      <div class="text-end mt-4">
+        <a href="{% url 'checkout' %}" class="btn btn-danger btn-lg">
+          Proceed to Checkout
+        </a>
       </div>
     </div>
   </div>
 </div>
+
+
 <!-- /SECTION -->
 {% endblock %}

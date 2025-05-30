@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static %}
 
 
     {% block title %}
@@ -11,8 +10,7 @@
 
  
 
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href={% static "css/style.css" %}>
+		<link rel="stylesheet" href="https://tboiii-123.github.io/Ecommerce-static-files/css/style.css">
 		
 
         		<!-- Bootstrap -->
@@ -52,7 +50,10 @@
 						<a href={% url 'category_link' 'Laptops' %}>
 							<div class="shop">
 							<div class="shop-img">
-								<img src={% static "img/shop01.webp" %} alt="No Image" 
+								<img src= "https://tboiii-123.github.io/Ecommerce-static-files/img/shop01.webp"
+
+
+								alt="No Image" 
 								loading="lazy"
 								decoding="async"
 								fetchpriority="low"
@@ -74,8 +75,8 @@
 						<a href={% url 'category_link' 'Shoes' %}>
 							<div class="shop">
 								<div class="shop-img">
-									<img src={% static "img/nike.webp" %} alt=""
-									
+									<img src="https://tboiii-123.github.io/Ecommerce-static-files/img/nike.webp"
+									alt="No Image"				
 									loading="lazy"
 									decoding="async"
 									fetchpriority="low"
@@ -97,7 +98,10 @@
 						<a href={% url 'category_link' 'Cloth' %}>
 							<div class="shop">
 								<div class="shop-img">
-									<img src={% static "img/tshirt3.webp" %} alt=""
+									<img src="https://tboiii-123.github.io/Ecommerce-static-files/img/tshirt3.webp"
+
+									alt="No Image"
+									
 									loading="lazy"
 									decoding="async"
 									fetchpriority="low"
