@@ -7,28 +7,18 @@
          Electro -  Ecommerce Website
      {% endblock %}
      
-
-
-
  {% block css%}
 
- <link rel="stylesheet" href={% static 'css/login.css' %}>
-		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href={% static 'css/slick.css' %}>
-		<link type="text/css" rel="stylesheet" href={% static "css/slick-theme.css" %}>
-
-		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href={% static "css/nouislider.min.css" %}>
-
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+ 
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href={% static "css/style.css" %}>
-        		<!-- Bootstrap -->
 		
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+        		<!-- Bootstrap -->
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 
 
@@ -39,6 +29,7 @@
 
         {% block navbar %}
 		<div id="navbar-container">
+			
 			{% include 'nav.html' %}
 		  </div>
 		  
@@ -56,7 +47,8 @@
 				<!-- row -->
 				<div class="row">
 					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
+					<div class="col-md-4 col-6">
+
 						<a href={% url 'category_link' 'Laptops' %}>
 							<div class="shop">
 							<div class="shop-img">
@@ -77,11 +69,12 @@
 					<!-- /shop -->
 
 					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
+					<div class="col-md-4 col-6">
+
 						<a href={% url 'category_link' 'Shoes' %}>
 							<div class="shop">
 								<div class="shop-img">
-									<img src={% static "img/sneaker2.avif" %} alt=""
+									<img src={% static "img/nike.webp" %} alt=""
 									
 									loading="lazy"
 									decoding="async"
@@ -99,7 +92,8 @@
 					<!-- /shop -->
 
 					<!-- shop -->
-					<div class="col-md-4 col-xs-6">
+					<div class="col-md-4 col-6">
+
 						<a href={% url 'category_link' 'Cloth' %}>
 							<div class="shop">
 								<div class="shop-img">
@@ -120,6 +114,7 @@
 				</div>
 				<!-- /row -->
 			</div>
+
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
@@ -135,91 +130,65 @@
 					<div class="col-md-12">
 						<div class="section-title">
 							<h3 class="title"> Products</h3>
-							<div class="section-nav">
-								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-									<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-									<li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-									<li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-								</ul>
-							</div>
+							
 						</div>
 					</div>
 					<!-- /section title -->
 
 					<!-- Products tab & slick -->
-					
-					<div class="col-md-12">
-					
+					<div class="container py-4">
 						<div class="row">
-							<div class="products-tabs">
-								<!-- tab -->
-								<div id="tab1" class="tab-pane active">
-									<div class="products-slick" data-nav="#slick-nav-1">
-										
-										<!-- product -->
-										{% for product in products%}
-					
-										<div class="product">
-											<a href={% url  'product' product.id %}>
-												
-											<div class="product-img">
-												<img src={{product.Image.url}} alt="No Image" loading="lazy"
-												decoding="async"
-												fetchpriority="low">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NEW</span>
-												</div>
+							{% for product in products %}
+							<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+								<div class="card h-100 shadow-sm border border-2 rounded-4 overflow-hidden">
+									<a href="{% url 'product' product.id %}" class="text-decoration-none">
+										<div class="position-relative" style="height: 250px; overflow: hidden;">
+											<img src="{{ product.Image.url }}" class="w-100 h-100 object-fit-cover" alt="{{ product.name }}" loading="lazy" decoding="async">
+											<div class="position-absolute top-0 start-0 m-2 d-flex gap-1">
+												<span class="badge bg-danger">-30%</span>
+												<span class="badge bg-success">NEW</span>
 											</div>
-											</a>
-											<div class="product-body">
-												<p class="product-category">{{product.category}}</p>
-												<h3 class="product-name">{{product.name}}</h3>
-												<h4 class="product-price">{{product.price}} <del class="product-old-price">$990.00</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<form class="add-to-cart-form"  data-product-id="{{ product.id }}">
-													{% csrf_token %}
-													<input type="hidden" name="quantity" value="1" min="1" >
-
-													
-													
-													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-
-											
-												</form>
-											</div>
-											
 										</div>
-										{% endfor %}
-
-					
-										
-									
-  
-										<!-- /product -->
-
-
+									</a>
+									<div class="card-body p-2 text-center">
+										<p class="text-muted mb-1 small">{{ product.category }}</p>
+										<h6 class="fw-semibold text-truncate" title="{{ product.name }}">{{ product.name }}</h6>
+										<div class="mb-1">
+											<span class="text-danger fw-bold">{{ product.price }}</span>
+											<del class="text-muted small ms-1">$990.00</del>
+										</div>
+										<div class="text-warning small mb-2">
+											{% for i in "12345" %}
+												<i class="fa fa-star"></i>
+											{% endfor %}
+										</div>
+										<div class="d-flex justify-content-center gap-1 mb-2">
+											<button class="btn btn-outline-secondary btn-sm rounded-circle" title="Wishlist">
+												<i class="fa fa-heart"></i>
+											</button>
+											<button class="btn btn-outline-secondary btn-sm rounded-circle" title="Compare">
+												<i class="fa fa-exchange"></i>
+											</button>
+											<button class="btn btn-outline-secondary btn-sm rounded-circle" title="Quick view">
+												<i class="fa fa-eye"></i>
+											</button>
+										</div>
 									</div>
-									<div id="slick-nav-1" class="products-slick-nav"></div>
+									<div class="card-footer bg-white border-0 text-center p-2">
+										<form class="add-to-cart-form" data-product-id="{{ product.id }}">
+											{% csrf_token %}
+											<input type="hidden" name="quantity" value="1" min="1">
+											<button type="submit" class="btn btn-danger btn-lg w-100 rounded-pill">
+												<i class="fa fa-shopping-cart me-1"></i> Add
+											</button>
+										</form>
+									</div>
 								</div>
-								<!-- /tab -->
 							</div>
+							{% endfor %}
 						</div>
 					</div>
+
 					
 					<!-- Products tab & slick -->
 				</div>
@@ -289,10 +258,10 @@
 							<h3 class="title">Top selling</h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab2">Laptops</a></li>
-									<li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
-									<li><a data-toggle="tab" href="#tab2">Cameras</a></li>
-									<li><a data-toggle="tab" href="#tab2">Accessories</a></li>
+									<li class="active"><a data-bs-toggle="tab" href="#tab2">Laptops</a></li>
+									<li><a data-bs-toggle="tab" href="#tab2">Smartphones</a></li>
+									<li><a data-bs-toggle="tab" href="#tab2">Cameras</a></li>
+									<li><a data-bs-toggle="tab" href="#tab2">Accessories</a></li>
 								</ul>
 							</div>
 						</div>
@@ -300,69 +269,59 @@
 					<!-- /section title -->
 
 					<!-- Products tab & slick -->
-					<div class="col-md-12">
+					<div class="container py-4">
 						<div class="row">
-							<div class="products-tabs">
-								<!-- tab -->
-								<div id="tab2" class="tab-pane fade in active">
-									<div class="products-slick" data-nav="#slick-nav-2">
-										<!-- product -->
-										{% for product in products2%}
-					
-										<div class="product">
-											<a href={% url  'product' product.id %}>
-												
-											<div class="product-img">
-												<img src={{product.Image.url}} alt="No Image" loading="lazy"
-												decoding="async"
-												fetchpriority="low">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NEW</span>
-												</div>
+							{% for product in products2%}
+							<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+								<div class="card h-100 shadow-sm border border-2 rounded-4 overflow-hidden">
+									<a href="{% url 'product' product.id %}" class="text-decoration-none">
+										<div class="position-relative" style="height: 250px; overflow: hidden;">
+											<img src="{{ product.Image.url }}" class="w-100 h-100 object-fit-cover" alt="{{ product.name }}" loading="lazy" decoding="async">
+											<div class="position-absolute top-0 start-0 m-2 d-flex gap-1">
+												<span class="badge bg-danger">-30%</span>
+												<span class="badge bg-success">NEW</span>
 											</div>
-											</a>
-											<div class="product-body">
-												<p class="product-category">{{product.category}}</p>
-												<h3 class="product-name">{{product.name}}</h3>
-												<h4 class="product-price">{{product.price}} <del class="product-old-price">$990.00</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<form class="add-to-cart-form"  data-product-id="{{ product.id }}">
-													{% csrf_token %}
-													<input type="hidden" name="quantity" value="1" min="1" >
-													
-													
-													<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-											
-												</form>
-												
-											</div>
-											
 										</div>
-										{% endfor %}
-
-					
-										
+									</a>
+									<div class="card-body p-2 text-center">
+										<p class="text-muted mb-1 small">{{ product.category }}</p>
+										<h6 class="fw-semibold text-truncate" title="{{ product.name }}">{{ product.name }}</h6>
+										<div class="mb-1">
+											<span class="text-danger fw-bold">{{ product.price }}</span>
+											<del class="text-muted small ms-1">$990.00</del>
+										</div>
+										<div class="text-warning small mb-2">
+											{% for i in "12345" %}
+												<i class="fa fa-star"></i>
+											{% endfor %}
+										</div>
+										<div class="d-flex justify-content-center gap-1 mb-2">
+											<button class="btn btn-outline-secondary btn-sm rounded-circle" title="Wishlist">
+												<i class="fa fa-heart"></i>
+											</button>
+											<button class="btn btn-outline-secondary btn-sm rounded-circle" title="Compare">
+												<i class="fa fa-exchange"></i>
+											</button>
+											<button class="btn btn-outline-secondary btn-sm rounded-circle" title="Quick view">
+												<i class="fa fa-eye"></i>
+											</button>
+										</div>
 									</div>
-									<div id="slick-nav-2" class="products-slick-nav"></div>
+									<div class="card-footer bg-white border-0 text-center p-2">
+										<form class="add-to-cart-form" data-product-id="{{ product.id }}">
+											{% csrf_token %}
+											<input type="hidden" name="quantity" value="1" min="1">
+											<button type="submit" class="btn btn-danger btn-lg w-100 rounded-pill">
+												<i class="fa fa-shopping-cart me-1"></i> Add
+											</button>
+										</form>
+									</div>
 								</div>
-								<!-- /tab -->
 							</div>
+							{% endfor %}
 						</div>
 					</div>
+					
 					<!-- /Products tab & slick -->
 				</div>
 				<!-- /row -->
@@ -464,18 +423,6 @@
 	
 		
 {% include 'footer.html' %}
-        {% endblock %}
-
-{% block js%}
-		<!-- jQuery Plugins -->
-		<script src={% static "js/jquery.min.js" %} defer></script>
-		<script src={% static "js/bootstrap.min.js" %} defer></script>
-		<script src={% static "js/slick.min.js" %} defer></script>
-		<script src={% static "js/nouislider.min.js" %} defer></script>
-		<script src={% static "js/jquery.zoom.min.js" %} defer></script>
-		<script src={% static "js/main.js" %} defer></script>
-		
-
         {% endblock %}
 
 

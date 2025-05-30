@@ -12,21 +12,6 @@
 
  {% block css%}
 
- <link rel="stylesheet" href={% static 'css/login.css' %}>
-		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href={% static 'css/slick.css' %}>
-		<link type="text/css" rel="stylesheet" href={% static "css/slick-theme.css" %}>
-
-		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href={% static "css/nouislider.min.css" %}>
-
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
-
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href={% static "css/style.css" %}>
-        		<!-- Bootstrap -->
-		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -37,7 +22,11 @@
 
         {% block navbar %}
     
-        {% include 'nav.html'%}
+        <div id="navbar-container">
+			
+			{% include 'nav.html' %}
+		  </div>
+		  
         
         {% endblock %}
     
@@ -395,51 +384,36 @@
 						</div>
 					</div>
 
-					{% for related in relateds%}
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-
-
-						<div class="product">
-							<a href="{% url 'product' related.id %}">
-
-							
-							<div class="product-img">
-								<img src={{related.Image.url}} alt="No Image" loading="lazy"
-								decoding="async"
-								fetchpriority="low">
-								<div class="product-label">
-									<span class="sale">-30%</span>
-								</div>
-							</div>
+					{% for related in relateds %}
+					
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+						<div class="card h-100 border rounded shadow-sm">
+						<a href="{% url 'product' related.id %}">
+							<img src="{{ related.Image.url }}" class="card-img-top" alt="No Image" style="object-fit: cover; height: 220px;">
 						</a>
-							
-							<div class="product-body">
-								
-								<h3 class="product-name">{{related.name}}</h3>
-								<h4 class="product-price">{{related.price}} <del class="product-old-price">$990.00</del></h4>
-								<div class="product-rating">
-								</div>
-								<div class="product-btns">
-									<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-									<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-									<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-								</div>
+						<div class="card-body">
+							<h6 class="text-muted mb-1">{{ related.category }}</h6>
+							<h5 class="card-title text-truncate" style="max-height: 2.4em; overflow: hidden;">{{ related.name }}</h5>
+							<p class="card-text text-danger fw-bold">
+							{{ related.price }}
+							<del class="text-muted small ms-2">$990.00</del>
+							</p>
+							<div class="d-flex justify-content-between mb-2">
+							<button class="btn btn-outline-secondary btn-sm" title="Wishlist"><i class="fa-solid fa-heart"></i></button>
+							<button class="btn btn-outline-secondary btn-sm" title="Compare"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+							<button class="btn btn-outline-secondary btn-sm" title="Quick View"><i class="fa-solid fa-eye"></i></button>
 							</div>
-							<form  class="add-to-cart-form"  data-product-id="{{ related.id }}">
-								{% csrf_token %}
-								<input type="hidden" name="quantity" value="1" min="1" >
-													
-							<div class="add-to-cart">
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-													
-							</div>
+							<form class="add-to-cart-form d-grid gap-2" data-product-id="{{ related.id }}">
+							{% csrf_token %}
+							<input type="hidden" name="quantity" value="1" min="1">
+							<button class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-shopping me-1"></i> Add to cart</button>
+							</form>
 						</div>
-					</form>
-
+						</div>
 					</div>
-					{% endfor %}
-					<!-- /product -->
+
+  {% endfor %}
+
 
 
 				</div>
@@ -546,14 +520,3 @@
         {% include 'footer.html' %}
         {% endblock %}
 
-{% block js%}
-		<!-- jQuery Plugins -->
-		<script src={% static "js/jquery.min.js" %} defer></script>
-		<script src={% static "js/bootstrap.min.js" %} defer></script>
-		<script src={% static "js/slick.min.js" %} defer></script>
-		<script src={% static "js/nouislider.min.js" %} defer></script>
-		<script src={% static "js/jquery.zoom.min.js" %} defer></script>
-		<script src={% static "js/main.js" %} defer></script>
-		
-
-        {% endblock %}
