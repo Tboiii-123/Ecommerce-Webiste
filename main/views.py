@@ -45,71 +45,76 @@ def Login(request):
 
                 })
 
-
-#Register User 
 def register(request):
-    
+    if request.method == "POST":
+        firstname = request.POST.get('fname') or ''
+        lastname = request.POST.get('lname') or ''
+        username = request.POST.get('username') or ''
+        number = request.POST.get('number') or ''
+        email = request.POST.get('email') or ''
+        password1 = request.POST.get('password')
+        password2 = request.POST.get('password2')
 
-    if request.method =="POST":
+        if not all([firstname, lastname, username, number, email, password1, password2]):
+            messages.error(request, "All entries must be filled.")
+            return render(request, 'register.html', {
+                'fname': firstname,
+                'lname': lastname,
+                'username': username,
+                'number': number,
+                'email': email,
+            })
 
-            firstname =request.POST.get('fname') or None
-            lastname =request.POST.get('lname')   or None         
-            username =request.POST.get('username') or None
-            number  =request.POST.get('number') or None
-            email =request.POST.get('email') or None
-            password1 =request.POST.get('password')
-            password2=request.POST.get('password2')
-        
-            if firstname =='' or lastname =='' or username=='' or number =='' or number =='' or  email =='' or password1 =='' or password2 =='':                
-                messages.error(request,("All Entry must be filled......"))
-                return redirect('register')
+        elif User.objects.filter(username=username).exists():
+            messages.error(request, "Username already taken. Please try again.")
+            return render(request, 'register.html', {
+                'fname': firstname,
+                'lname': lastname,
+                'username': username,
+                'number': number,
+                'email': email,
+            })
 
-            else:            
-                    if User.objects.filter(username =username).exists():
-                        messages.error(request,("Sorry!!,there was a problem registering. Username already taken. Please try again...."))
-                        return redirect('register')
-                    elif password1 != password2:
-                        messages.error(request,("Make sure your password matches...."))
-                        return redirect('register')  
+        elif password1 != password2:
+            messages.error(request, "Make sure your password matches.")
+            return render(request, 'register.html', {
+                'fname': firstname,
+                'lname': lastname,
+                'username': username,
+                'number': number,
+                'email': email,
+            })
 
-                    else :
-                        try:                                            
-                            user=  User.objects.create_user(username=username,
-                                                                first_name=firstname, 
-                                                                last_name =lastname,
-                                                                password=password1,
-                                                                email=email                                                     
-                                                                )   
-                            user_model =User.objects.get(
-                                  username =username
-                            )                
-                            new_profile =Profile.objects.create(user =user_model,
-                                                                                                                        
-                                                            fname =user_model.first_name,
+        else:
+            try:
+                user = User.objects.create_user(
+                    username=username,
+                    first_name=firstname,
+                    last_name=lastname,
+                    password=password1,
+                    email=email
+                )
+                Profile.objects.create(
+                    user=user,
+                    fname=firstname,
+                    lname=lastname,
+                    email=email,
+                    number=number,
+                )
+                messages.success(request, "You have registered successfully.")
+                return redirect('login')
 
-                                                            lname =user_model.last_name,
+            except Exception as e:
+                messages.error(request, f"An error occurred: {str(e)}. Please try again.")
+                return render(request, 'register.html', {
+                    'fname': firstname,
+                    'lname': lastname,
+                    'username': username,
+                    'number': number,
+                    'email': email,
+                })
 
-                                                            email =user_model.email,
-
-                                                            number = number,
-
-                                                                        )
-
-                            new_profile.save()
-
-                            
-                                                                                
-                            messages.success(request,("You Have Registered Successfully......."))
-                    
-                            return redirect('login')
-
-                        except Exception as e:
-                                messages.error(request, f"An error occurred: {str(e)}. Please try again.")
-                                return redirect('register')
-
-    return render(request,'register.html',{
-        
-    })
+    return render(request, 'register.html')
 
 
 #Logout
