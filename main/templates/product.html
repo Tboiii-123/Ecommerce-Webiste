@@ -505,7 +505,8 @@ document.body.addEventListener('submit', function(e) {
 	const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
 
 	// 🌟 Optimistic toast immediately
-	showToast('Adding to cart...');
+	showToast('Cart added successfully!');
+		
 
 	fetch(`/add-to-cart/${productId}/`, {
 		method: 'POST',
@@ -518,7 +519,7 @@ document.body.addEventListener('submit', function(e) {
 	.then(response => response.json())
 	.then(data => {
 		if (data.success) {
-			showToast('Cart added successfully!');
+			//showToast('Cart added successfully!');
 
 			// Refresh navbar
 			fetch('/navbar/')
