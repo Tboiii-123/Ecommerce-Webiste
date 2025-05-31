@@ -379,53 +379,84 @@
 		  </div>
 		  
 		<!-- /NEWSLETTER -->
+<!-- 🔔 Toast container -->
+<div id="toast" style="
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: #28a745;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 5px;
+	display: none;
+	z-index: 9999;
+	font-family: sans-serif;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+"></div>
+
 <script>
-	function setupAddToCartForms() {
-		document.body.addEventListener('submit', function(e) {
-			const form = e.target.closest('.add-to-cart-form');
-			if (!form) return;
-	
-			e.preventDefault();
-	
-			const productId = form.getAttribute('data-product-id');
-			const quantity = form.querySelector('input[name="quantity"]').value;
-			const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
-	
-			fetch(`/add-to-cart/${productId}/`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					'X-CSRFToken': csrfToken
-				},
-				body: JSON.stringify({ quantity: quantity })
-			})
-			.then(response => response.json())
-			.then(data => {
-				if (data.success) {
-					alert('Cart added successfully!');
-	
-					fetch('/navbar/')
-						.then(res => res.text())
-						.then(html => {
-							document.getElementById('navbar-container').innerHTML = html;
-						});
-				} else {
-					alert(data.error || 'Failed to add item');
-				}
-			})
-			.catch(error => {
-				console.error('Error adding to cart:', error);
-			});
+// ✅ Toast function
+function showToast(message, bgColor = '#28a745') {
+	const toast = document.getElementById('toast');
+	toast.textContent = message;
+	toast.style.backgroundColor = bgColor;
+	toast.style.display = 'block';
+
+	setTimeout(() => {
+		toast.style.display = 'none';
+	}, 2000);
+}
+
+// ✅ Add-to-cart logic with toast
+function setupAddToCartForms() {
+	document.body.addEventListener('submit', function(e) {
+		const form = e.target.closest('.add-to-cart-form');
+		if (!form) return;
+
+		e.preventDefault();
+
+		const productId = form.getAttribute('data-product-id');
+		const quantity = form.querySelector('input[name="quantity"]').value;
+		const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+		// 🌟 Optimistic toast immediately
+		showToast('Adding to cart...');
+
+		fetch(`/add-to-cart/${productId}/`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRFToken': csrfToken
+			},
+			body: JSON.stringify({ quantity: quantity })
+		})
+		.then(response => response.json())
+		.then(data => {
+			if (data.success) {
+				showToast('Cart added successfully!');
+
+				// Refresh navbar
+				fetch('/navbar/')
+					.then(res => res.text())
+					.then(html => {
+						document.getElementById('navbar-container').innerHTML = html;
+					});
+			} else {
+				showToast(data.error || 'Failed to add item', '#dc3545'); // red for error
+			}
+		})
+		.catch(error => {
+			console.error('Error adding to cart:', error);
+			showToast('Something went wrong. Try again.', '#dc3545');
 		});
-	}
-	
-	// Run on initial page load
-	document.addEventListener('DOMContentLoaded', () => {
-		setupAddToCartForms();
 	});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	setupAddToCartForms();
+});
+</script>
 	
-		</script>
-		
 	
 		
 {% include 'footer.html' %}
