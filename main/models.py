@@ -14,22 +14,22 @@ class Profile(models.Model):
                 
             
             
-                fname=models.CharField(max_length=200)
+                fname=models.CharField(max_length=200,blank=True, null=True)
                 
-                lname=models.CharField(max_length=200)
+                lname=models.CharField(max_length=200,blank=True,null=True)
                 
             
-                email =models.EmailField(blank=True)
+                email =models.EmailField(blank=True,null=True)
             
-                number =models.CharField(max_length=200)
+                number =models.CharField(max_length=200,blank=True,null=True)
             
-                address =models.CharField(max_length=200, blank=True)
+                address =models.CharField(max_length=200, blank=True,null=True)
             
                 Dob =models.DateField(blank=True, null=True)
                  
                 #To add a default profile 
                 #We use default attribute
-                profile_img  =models.ImageField(upload_to='profile',default ='blank.png',blank=True)
+                profile_img  =models.ImageField(upload_to='profile',default ='blank.png',blank=True,null=True)
             
                 
             

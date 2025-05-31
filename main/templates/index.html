@@ -421,6 +421,7 @@ function setupAddToCartForms() {
 
 		// 🌟 Optimistic toast immediately
 		showToast('Cart added successfully!');
+		
 
 		fetch(`/add-to-cart/${productId}/`, {
 			method: 'POST',
