@@ -165,26 +165,16 @@ def profile(request):
             
          # Date of Birth handling
         dob_input = request.POST.get('dob')
-        number =request.POST.get('number') 
-        address =request.POST.get('address') 
-        email =request.POST.get('email')     
-        
         if dob_input:
             try:
                 dob = request.POST.get('dob')
             except ValueError:
                 dob = None  # or handle invalid date input separately
-                number = None
-                address = None
-                email = None  
-                
         else:
             dob = None
-            number = None
-            address = None
-            email = None  
-
-
+        number =request.POST.get('number') or None
+        address =request.POST.get('address') or None
+        email =request.POST.get('email')     or None   
         profile.profile_img =image        
         profile.Dob =dob
         profile.number= number
@@ -196,6 +186,7 @@ def profile(request):
 
     return render(request,'profile.html',{
          'profile':profile
+         
 
     })
 
