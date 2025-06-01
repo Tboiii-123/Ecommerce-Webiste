@@ -1,7 +1,8 @@
 
 # 🛒 E-commerce Web Application
 
-A fully functional, responsive **E-commerce platform** built with **Django**, designed with a user-friendly shopping experience in mind. This project includes cart functionality, Stripe checkout, file/media uploads, static/media hosting via CDN and Cloudinary, and professional deployment using Render.
+A fully functional, responsive **E-commerce platform** built with **Django**, designed with a user-friendly shopping experience in mind. This project includes R cart functionality, Stripe checkout, file/media uploads, static/media hosting via CDN and Cloudinary, and professional deployment using Render.
+
 
 ---
 
@@ -11,6 +12,7 @@ A fully functional, responsive **E-commerce platform** built with **Django**, de
 - 🛍️ Add-to-cart, update & delete functionality
 - 🧮 Dynamic cart summary and pricing logic
 - 💳 Secure Stripe Checkout integration
+- 🔐 User Authentication
 - 📤 File & folder uploads (real-time update)
 - ☁️ Media files hosted on [Cloudinary](https://cloudinary.com/)
 - 🌍 Static files hosted via CDN or external static server
@@ -36,17 +38,21 @@ A fully functional, responsive **E-commerce platform** built with **Django**, de
 ## 📁 Project Structure
 
 ```
-ecommerce-website/
-│
-├── static/              # CSS, JS, Images (served via CDN)
-├── media/               # Uploaded media files (Cloudinary)
-├── templates/           # HTML Templates
-├── core/                # Main Django app
-├── cart/                # Cart logic
-├── orders/              # Checkout, Stripe integration
-├── uploads/             # Temp uploads (optional)
+├── Ecommerce/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── main/                       # Main eCommerce app
+│   ├── templates/
+│   ├── static/
+│   └── views.py
+├── staticfiles/                # Admin static files (served via CDN)
+├── media/                      # Media files (hosted on Cloudinary)
 ├── manage.py
-└── requirements.txt
+├── requirements.txt
+└── README.md
+
 ```
 
 ---
@@ -57,7 +63,7 @@ ecommerce-website/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/ecommerce-website.git
+   git clone https://github.com/Tboiii-123/Ecommerce-Webiste.git
    cd ecommerce-website
    ```
 
@@ -97,6 +103,11 @@ ecommerce-website/
    ```
 
 ---
+##🔐 Authentication
+
+-Registration and login forms
+-Session management
+-Profile page 
 
 ## 💳 Stripe Payment Integration
 
@@ -150,11 +161,11 @@ ecommerce-website/
 ### 📌 Phase 1: Setup
 
 - Django project initialized
-- Apps created: `core`, `cart`, `orders`
+- Apps created: `main`
 
 ### 🧩 Phase 2: Cart & Checkout
 
-- Cart logic using Django sessions
+- Cart logic using Django database
 - Add/remove/update views
 - Stripe integration for checkout
 
@@ -189,7 +200,7 @@ ecommerce-website/
 
 **Hussein Lawal Taiwo**  
 🎓 Python | Django | Web Developer  
-📧 Ecommerce@gmail.com  
+📧 lawalhussein775@gmail.com  
 📱 +234 9035014430  
 
 ---
