@@ -1,7 +1,7 @@
 
 # 🛒 E-commerce Web Application
 
-A fully functional, responsive **E-commerce platform** built with **Django**, designed with a user-friendly shopping experience in mind. This project includes R cart functionality, Stripe checkout, file/media uploads, static/media hosting via CDN and Cloudinary, and professional deployment using Render.
+A fully functional, responsive **E-commerce platform** built with **Django**, designed with a user-friendly shopping experience in mind. This project includes Autehntication, cart functionality, Stripe checkout, file/media uploads, static/media hosting via CDN and Cloudinary, and professional deployment using Render.
 
 
 ---
@@ -103,11 +103,13 @@ A fully functional, responsive **E-commerce platform** built with **Django**, de
    ```
 
 ---
-##🔐 Authentication
+## 💳 Authentication
 
--Registration and login forms
--Session management
--Profile page 
+- Registration and login forms.
+- Session management.
+- Profile page .
+
+---
 
 ## 💳 Stripe Payment Integration
 
