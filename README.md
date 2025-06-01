@@ -155,6 +155,14 @@ A fully functional, responsive **E-commerce platform** built with **Django**, de
 ## 🖼️ Screenshots
 
 > *(Include screenshots of homepage, cart, checkout, admin panel, mobile view, etc. here in markdown image format)*
+> ![ecom](https://github.com/user-attachments/assets/15f866fc-dc76-4d46-9421-d15336c60808)
+> ![ecom2](https://github.com/user-attachments/assets/dab3eed4-0d79-4978-a217-ee04437b654b)
+ > ![ecom](https://github.com/user-attachments/assets/b70456cd-0f52-4eee-b31c-e99f862be69b)
+> ![ecom7](https://github.com/user-attachments/assets/5d235b3c-ff31-4ab4-b1c5-e346b3d306b7)
+> ![ecom6](https://github.com/user-attachments/assets/85e9d374-926f-44a0-9b7f-242e0af725dc)
+> ![ecom5](https://github.com/user-attachments/assets/28e2183a-00cb-41a7-b40d-a13a3dd2ae2c)
+> ![ecom4](https://github.com/user-attachments/assets/4a1bb557-3e73-42af-93f2-9fa499ba47de)
+> ![ecom3](https://github.com/user-attachments/assets/b934cb10-2cf7-4072-83a5-baaa9f878bd4)
 
 ---
 
