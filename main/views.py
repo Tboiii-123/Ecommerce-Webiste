@@ -500,16 +500,3 @@ def custom_500(request):
     return render(request, 'error.html', status=500)
 
 
-'''
-lawal
-1234
-lawalhussein775@gmail.com
-
-
-Tboiii
-1234
-
-
-kenny 
-123
-'''
